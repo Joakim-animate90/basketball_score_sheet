@@ -266,4 +266,99 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+    public class Mbura extends Display{
+        int mburaFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_mbura);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            mburaFouls= mburaFouls + 1;
+
+            display(mburaFouls);
+
+
+        }
+    }
+    public class Gesare extends Display{
+        int gesareFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_gesare);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            gesareFouls= gesareFouls + 1;
+
+            display(gesareFouls);
+
+
+        }
+    }
+    public class Bill extends Display{
+        int billFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_bill);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            billFouls= billFouls + 1;
+
+            display(billFouls);
+
+
+        }
+    }
+    public class Joy extends Display{
+        int joyFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_joy);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            joyFouls= joyFouls + 1;
+
+            display(joyFouls);
+
+
+        }
+    }
+    public class Oguda extends Display{
+        int profFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_oguda);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            ogudaFouls= ogudaFouls + 1;
+
+            display(ogudaFouls);
+
+
+        }
+    }
 }
