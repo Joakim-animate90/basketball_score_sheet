@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
     Bill b = new Bill();
     Joy jo = new Joy();
     Oguda o = new Oguda();
+    Griffins gr = new Griffins();
+    Smith s = new Smith();
+    Opiyo op = new Opiyo();
+    Tony t = new Tony();
+    Mwichabe mw = new Mwichabe();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,27 +96,58 @@ public class MainActivity extends AppCompatActivity {
         scoreTemB = 0;
         displayForTeamA(0);
         displayForTeamB(0);
+        j.resetButton(view);
+        p.resetButton(view);
+        ja.resetButton(view);
+        ju.resetButton(view);
+        pr.resetButton(view);
+        m.resetButton(view);
+        g.resetButton(view);
+        b.resetButton(view);
+        jo.resetButton(view);
+        o.resetButton(view);
 
     }
     public void onClick(View view) {
-        TextView txtView;
+        TextView txtView, txtView_gr, txtView_s, txtView_op,txtView_t, txtView_m;
         System.out.println("printed");
         switch(view.getId()) {
             case R.id.joakim:
                 txtView = (TextView)findViewById(R.id.joakim);
+                txtView_gr = (TextView)findViewById(R.id.griffins);
                 if (j.joakimFouls <= 4){
                     j.fouls(view);
                 }
 
             else{
                 txtView.setVisibility(view.INVISIBLE);
+
                 Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
+                txtView_gr.setVisibility(view.VISIBLE);
+                }
+
+
+                break;
+            case R.id.griffins:
+
+                txtView_gr = (TextView)findViewById(R.id.griffins);
+                if (gr.griffinsFouls <= 4){
+                    gr.fouls(view);
+                }
+
+                else{
+                    txtView_gr.setVisibility(view.INVISIBLE);
+
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
+
                 }
 
 
                 break;
             case R.id.peter:
-
+                txtView_s = (TextView)findViewById(R.id.smith);
                 txtView = (TextView)findViewById(R.id.peter);
                 if (p.peterFouls <= 4){
                     p.fouls(view);
@@ -120,12 +156,28 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+                    txtView_s.setVisibility(view.VISIBLE);
+                }
+
+
+                break;
+            case R.id.smith:
+
+                txtView = (TextView)findViewById(R.id.smith);
+                if (s.smithFouls <= 4){
+                    s.fouls(view);
+                }
+
+                else{
+                    txtView.setVisibility(view.INVISIBLE);
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
                 }
 
 
                 break;
             case R.id.jay:
-
+                txtView_op = (TextView)findViewById(R.id.opiyo);
                 txtView = (TextView)findViewById(R.id.jay);
                 if (ja.jayFouls<= 4){
                     ja.fouls(view);
@@ -134,12 +186,28 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+                    txtView_op.setVisibility(view.VISIBLE);
+                }
+
+
+                break;
+            case R.id.opiyo:
+
+                txtView = (TextView)findViewById(R.id.opiyo);
+                if (op.opiyoFouls <= 4){
+                    op.fouls(view);
+                }
+
+                else{
+                    txtView.setVisibility(view.INVISIBLE);
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
                 }
 
 
                 break;
             case R.id.judy:
-
+                txtView_t = (TextView)findViewById(R.id.tony);
                 txtView = (TextView)findViewById(R.id.judy);
                 if (ju.judyFouls <= 4){
                     ju.fouls(view);
@@ -148,12 +216,28 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+                    txtView_t.setVisibility(View.VISIBLE);
+                }
+
+
+                break;
+            case R.id.tony:
+
+                txtView = (TextView)findViewById(R.id.tony);
+                if (t.tonyFouls <= 4){
+                    t.fouls(view);
+                }
+
+                else{
+                    txtView.setVisibility(view.INVISIBLE);
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
                 }
 
 
                 break;
             case R.id.prof:
-
+                txtView_m = (TextView)findViewById(R.id.mwichabe);
                 txtView = (TextView)findViewById(R.id.prof);
                 if (pr.profFouls<= 4){
                     pr.fouls(view);
@@ -162,6 +246,22 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+                    txtView_m.setVisibility(view.VISIBLE);
+                }
+
+
+                break;
+            case R.id.mwichabe:
+
+                txtView = (TextView)findViewById(R.id.mwichabe);
+                if (mw.mwichabeFouls<= 4){
+                    mw.fouls(view);
+                }
+
+                else{
+                    txtView.setVisibility(view.INVISIBLE);
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
                 }
 
 
@@ -246,6 +346,10 @@ public class MainActivity extends AppCompatActivity {
 
         }
         public void fouls(View view){}
+        public void resetButton(View view) {
+
+
+        }
 
     }
     public class Peter extends Display{
@@ -264,6 +368,15 @@ public class MainActivity extends AppCompatActivity {
 
                 display(peterFouls);
 
+
+        }
+
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.peter);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
 
         }
     }
@@ -285,6 +398,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.joakim);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
     }
     public class Jay extends Display{
         int jayFouls = 0;
@@ -302,6 +423,14 @@ public class MainActivity extends AppCompatActivity {
 
             display(jayFouls);
 
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.jay);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
 
         }
     }
@@ -323,6 +452,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.judy);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
     }
     public class Prof extends Display{
         int profFouls = 0;
@@ -340,6 +477,14 @@ public class MainActivity extends AppCompatActivity {
 
             display(profFouls);
 
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.prof);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
 
         }
     }
@@ -361,6 +506,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.mbura);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
     }
     public class Gesare extends Display{
         int gesareFouls = 0;
@@ -378,6 +531,14 @@ public class MainActivity extends AppCompatActivity {
 
             display(gesareFouls);
 
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.gesare);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
 
         }
     }
@@ -399,6 +560,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.bill);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
     }
     public class Joy extends Display{
         int joyFouls = 0;
@@ -418,6 +587,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.joy);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
     }
     public class Oguda extends Display{
         int ogudaFouls = 0;
@@ -435,6 +612,149 @@ public class MainActivity extends AppCompatActivity {
 
             display(ogudaFouls);
 
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.oguda);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class Griffins extends Display{
+        int griffinsFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_griffins);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            griffinsFouls= griffinsFouls + 1;
+
+            display(griffinsFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.griffins);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class Smith extends Display{
+        int smithFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_smith);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            smithFouls= smithFouls + 1;
+
+            display(smithFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.smith);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class Opiyo extends Display{
+        int opiyoFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_opiyo);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            opiyoFouls= opiyoFouls + 1;
+
+            display(opiyoFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.opiyo);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class Tony extends Display{
+        int tonyFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_tony);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            tonyFouls= tonyFouls + 1;
+
+            display(tonyFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.tony);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class Mwichabe extends Display{
+        int mwichabeFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_mwichabe);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            mwichabeFouls= mwichabeFouls + 1;
+
+            display(mwichabeFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.mwichabe);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
 
         }
     }
