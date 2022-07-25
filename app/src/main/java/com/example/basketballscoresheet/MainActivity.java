@@ -15,6 +15,12 @@ public class MainActivity extends AppCompatActivity {
     Jay ja = new Jay();
     Judy ju = new Judy();
     Prof pr = new Prof();
+    Mbura m = new Mbura();
+    Gesare g = new Gesare();
+    Bill b = new Bill();
+    Joy j0 = new Joy();
+    Oguda o = new Oguda();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -160,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 break;
+
 
 
         }
