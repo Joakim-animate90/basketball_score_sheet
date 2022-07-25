@@ -730,7 +730,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.griffins);
-            txtView.setVisibility(view.VISIBLE);
+            txtView.setVisibility(view.INVISIBLE);
+
 
             display(0);
 
@@ -757,7 +758,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.smith);
-            txtView.setVisibility(view.VISIBLE);
+            txtView.setVisibility(view.INVISIBLE);
 
             display(0);
 
@@ -784,7 +785,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.opiyo);
-            txtView.setVisibility(view.VISIBLE);
+            txtView.setVisibility(view.INVISIBLE);
 
             display(0);
 
@@ -811,7 +812,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.tony);
-            txtView.setVisibility(view.VISIBLE);
+            txtView.setVisibility(view.INVISIBLE);
 
             display(0);
 
@@ -865,7 +866,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.ongare);
-            txtView.setVisibility(view.VISIBLE);
+            txtView.setVisibility(view.INVISIBLE);
 
             display(0);
 
@@ -892,7 +893,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.otis);
-            txtView.setVisibility(view.VISIBLE);
+            txtView.setVisibility(view.INVISIBLE);
 
             display(0);
 
@@ -919,7 +920,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.toboa);
-            txtView.setVisibility(view.VISIBLE);
+            txtView.setVisibility(view.INVISIBLE);
 
             display(0);
 
@@ -946,7 +947,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.john);
-            txtView.setVisibility(view.VISIBLE);
+            txtView.setVisibility(view.INVISIBLE);
 
             display(0);
 
@@ -973,7 +974,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.regina);
-            txtView.setVisibility(view.VISIBLE);
+            txtView.setVisibility(view.INVISIBLE);
 
             display(0);
 
