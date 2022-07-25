@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
     Opiyo op = new Opiyo();
     Tony t = new Tony();
     Mwichabe mw = new Mwichabe();
+    Ongare on = new Ongare();
+    Otis ot = new Otis();
+    Toboa to = new Toboa();
+    John jn = new John();
+    Regina r = new Regina();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -752,6 +758,141 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void resetButton(View view) {
             TextView txtView = (TextView)findViewById(R.id.mwichabe);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class Ongare extends Display{
+        int ongareFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_ongare);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            ongareFouls= ongareFouls + 1;
+
+            display(ongareFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.ongare);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class Otis extends Display{
+        int otisFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_otis);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            otisFouls= otisFouls + 1;
+
+            display(otisFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.otis);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class Toboa extends Display{
+        int toboaFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_toboa);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            toboaFouls= toboaFouls + 1;
+
+            display(toboaFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.toboa);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class John extends Display{
+        int johnFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_john);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            johnFouls= johnFouls + 1;
+
+            display(johnFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.john);
+            txtView.setVisibility(view.VISIBLE);
+
+            display(0);
+
+        }
+    }
+    public class Regina extends Display{
+        int reginaFouls = 0;
+        @Override
+        public void display(int score) {
+            TextView foulsView = (TextView) findViewById(R.id.fouls_regina);
+            foulsView.setText("" + score);
+
+        }
+
+        @Override
+        public void fouls(View view) {
+
+            reginaFouls= reginaFouls + 1;
+
+            display(reginaFouls);
+
+
+        }
+        @Override
+        public void resetButton(View view) {
+            TextView txtView = (TextView)findViewById(R.id.regina);
             txtView.setVisibility(view.VISIBLE);
 
             display(0);
