@@ -115,12 +115,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void onClick(View view) {
-        TextView txtView, txtView_gr, txtView_s, txtView_op,txtView_t, txtView_m;
+        TextView txtView, txtView2;
         System.out.println("printed");
         switch(view.getId()) {
             case R.id.joakim:
                 txtView = (TextView)findViewById(R.id.joakim);
-                txtView_gr = (TextView)findViewById(R.id.griffins);
+                txtView2 = (TextView)findViewById(R.id.griffins);
                 if (j.joakimFouls <= 4){
                     j.fouls(view);
                 }
@@ -130,20 +130,20 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
 
-                txtView_gr.setVisibility(view.VISIBLE);
+                txtView2.setVisibility(view.VISIBLE);
                 }
 
 
                 break;
             case R.id.griffins:
 
-                txtView_gr = (TextView)findViewById(R.id.griffins);
+                txtView2 = (TextView)findViewById(R.id.griffins);
                 if (gr.griffinsFouls <= 4){
                     gr.fouls(view);
                 }
 
                 else{
-                    txtView_gr.setVisibility(view.INVISIBLE);
+                    txtView2.setVisibility(view.INVISIBLE);
 
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
 
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.peter:
-                txtView_s = (TextView)findViewById(R.id.smith);
+                txtView2 = (TextView)findViewById(R.id.smith);
                 txtView = (TextView)findViewById(R.id.peter);
                 if (p.peterFouls <= 4){
                     p.fouls(view);
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
-                    txtView_s.setVisibility(view.VISIBLE);
+                    txtView2.setVisibility(view.VISIBLE);
                 }
 
 
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.jay:
-                txtView_op = (TextView)findViewById(R.id.opiyo);
+                txtView2 = (TextView)findViewById(R.id.opiyo);
                 txtView = (TextView)findViewById(R.id.jay);
                 if (ja.jayFouls<= 4){
                     ja.fouls(view);
@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
-                    txtView_op.setVisibility(view.VISIBLE);
+                    txtView2.setVisibility(view.VISIBLE);
                 }
 
 
@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.judy:
-                txtView_t = (TextView)findViewById(R.id.tony);
+                txtView2= (TextView)findViewById(R.id.tony);
                 txtView = (TextView)findViewById(R.id.judy);
                 if (ju.judyFouls <= 4){
                     ju.fouls(view);
@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
-                    txtView_t.setVisibility(View.VISIBLE);
+                    txtView2.setVisibility(View.VISIBLE);
                 }
 
 
@@ -243,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.prof:
-                txtView_m = (TextView)findViewById(R.id.mwichabe);
+                txtView2 = (TextView)findViewById(R.id.mwichabe);
                 txtView = (TextView)findViewById(R.id.prof);
                 if (pr.profFouls<= 4){
                     pr.fouls(view);
@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
-                    txtView_m.setVisibility(view.VISIBLE);
+                    txtView2.setVisibility(view.VISIBLE);
                 }
 
 
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.mbura:
-
+                txtView2 = (TextView)findViewById(R.id.ongare);
                 txtView = (TextView)findViewById(R.id.mbura);
                 if (m.mburaFouls<= 4){
                     m.fouls(view);
@@ -282,12 +282,28 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+                    txtView2.setVisibility(View.VISIBLE);
+                }
+
+
+                break;
+            case R.id.ongare:
+
+                txtView = (TextView)findViewById(R.id.ongare);
+                if (on.ongareFouls<= 4){
+                    on.fouls(view);
+                }
+
+                else{
+                    txtView.setVisibility(view.INVISIBLE);
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
                 }
 
 
                 break;
             case R.id.gesare:
-
+                txtView2 = (TextView)findViewById(R.id.otis);
                 txtView = (TextView)findViewById(R.id.gesare);
                 if (g.gesareFouls<= 4){
                     g.fouls(view);
@@ -296,12 +312,28 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+                    txtView2.setVisibility(view.VISIBLE);
+                }
+
+
+                break;
+            case R.id.otis:
+
+                txtView = (TextView)findViewById(R.id.otis);
+                if (ot.otisFouls<= 4){
+                    ot.fouls(view);
+                }
+
+                else{
+                    txtView.setVisibility(view.INVISIBLE);
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
                 }
 
 
                 break;
             case R.id.bill:
-
+                txtView2 = (TextView)findViewById(R.id.toboa);
                 txtView = (TextView)findViewById(R.id.bill);
                 if (b.billFouls<= 4){
                     b.fouls(view);
@@ -310,12 +342,28 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+                    txtView2.setVisibility(View.VISIBLE);
+                }
+
+
+                break;
+            case R.id.toboa:
+
+                txtView = (TextView)findViewById(R.id.toboa);
+                if (to.toboaFouls<= 4){
+                    to.fouls(view);
+                }
+
+                else{
+                    txtView.setVisibility(view.INVISIBLE);
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
                 }
 
 
                 break;
             case R.id.joy:
-
+                txtView2 = (TextView)findViewById(R.id.john);
                 txtView = (TextView)findViewById(R.id.joy);
                 if (jo.joyFouls<= 4){
                     jo.fouls(view);
@@ -324,12 +372,28 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+                    txtView2.setVisibility(View.VISIBLE);
+                }
+
+
+                break;
+            case R.id.john:
+
+                txtView = (TextView)findViewById(R.id.john);
+                if (jn.johnFouls<= 4){
+                    jn.fouls(view);
+                }
+
+                else{
+                    txtView.setVisibility(view.INVISIBLE);
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
                 }
 
 
                 break;
             case R.id.oguda:
-
+                txtView2 = (TextView)findViewById(R.id.regina);
                 txtView = (TextView)findViewById(R.id.oguda);
                 if (o.ogudaFouls<= 4){
                     o.fouls(view);
@@ -338,6 +402,22 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     txtView.setVisibility(view.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+                    txtView2.setVisibility(View.VISIBLE);
+                }
+
+
+                break;
+            case R.id.regina:
+
+                txtView = (TextView)findViewById(R.id.regina);
+                if (r.reginaFouls<= 4){
+                    r.fouls(view);
+                }
+
+                else{
+                    txtView.setVisibility(view.INVISIBLE);
+                    Toast.makeText(getApplicationContext(),"Exceeded Number of fouls", Toast.LENGTH_SHORT).show();
+
                 }
 
 
